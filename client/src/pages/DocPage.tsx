@@ -8,6 +8,10 @@ type DocPageProps = {
 }
 
 export function DocPage({ doc }: DocPageProps) {
+  const unplacedMedia = doc.media.filter(
+    (item) => typeof item === 'string' || !item.section,
+  )
+
   return (
     <main className="doc-content">
       <header className="doc-header">
@@ -44,17 +48,53 @@ export function DocPage({ doc }: DocPageProps) {
                 </ul>
               ) : null}
               {section.code ? <pre>{section.code}</pre> : null}
+              {section.table ? (
+                <div className="table-wrap inline-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        {section.table.headers.map((header) => (
+                          <th key={header}>{header}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.table.rows.map((row, rowIndex) => (
+                        <tr key={`${section.heading}-${rowIndex}`}>
+                          {row.map((cell, cellIndex) => (
+                            <td key={`${section.heading}-${rowIndex}-${cellIndex}`}>
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : null}
+              {(() => {
+                const sectionMedia = doc.media.filter(
+                  (item) =>
+                    typeof item !== 'string' && item.section === section.heading,
+                )
+
+                return sectionMedia.length > 0 ? (
+                  <MediaPlaceholders items={sectionMedia} />
+                ) : null
+              })()}
             </section>
           ))}
 
-          <section id="media-placeholders">
-            <h2>Media placeholders</h2>
-            <p>
-              Add screenshots, Mux embeds, store badges, or downloadable files
-              where they help a user complete the task without leaving the page.
-            </p>
-            <MediaPlaceholders items={doc.media} />
-          </section>
+          {unplacedMedia.length > 0 ? (
+            <section id="media-placeholders">
+              <h2>Media placeholders</h2>
+              <p>
+                Add screenshots, Mux embeds, store badges, or downloadable files
+                where they help a user complete the task without leaving the page.
+              </p>
+              <MediaPlaceholders items={unplacedMedia} />
+            </section>
+          ) : null}
         </article>
 
         <aside className="toc" aria-label="On this page">
@@ -64,7 +104,9 @@ export function DocPage({ doc }: DocPageProps) {
               {section.heading}
             </a>
           ))}
-          <a href="#media-placeholders">Media placeholders</a>
+          {unplacedMedia.length > 0 ? (
+            <a href="#media-placeholders">Media placeholders</a>
+          ) : null}
         </aside>
       </div>
     </main>
