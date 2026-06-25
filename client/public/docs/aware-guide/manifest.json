@@ -1,0 +1,485 @@
+[
+  {
+    "file": "image1.jpeg",
+    "src": "/docs/aware-guide/image1.jpeg",
+    "width": 168,
+    "height": 48,
+    "bytes": 4070
+  },
+  {
+    "file": "image10.png",
+    "src": "/docs/aware-guide/image10.png",
+    "width": 46,
+    "height": 20,
+    "bytes": 641
+  },
+  {
+    "file": "image11.png",
+    "src": "/docs/aware-guide/image11.png",
+    "width": 614,
+    "height": 192,
+    "bytes": 7619
+  },
+  {
+    "file": "image12.png",
+    "src": "/docs/aware-guide/image12.png",
+    "width": 903,
+    "height": 441,
+    "bytes": 37513
+  },
+  {
+    "file": "image13.png",
+    "src": "/docs/aware-guide/image13.png",
+    "width": 1187,
+    "height": 1251,
+    "bytes": 134476
+  },
+  {
+    "file": "image14.png",
+    "src": "/docs/aware-guide/image14.png",
+    "width": 617,
+    "height": 168,
+    "bytes": 20574
+  },
+  {
+    "file": "image15.png",
+    "src": "/docs/aware-guide/image15.png",
+    "width": 499,
+    "height": 206,
+    "bytes": 9460
+  },
+  {
+    "file": "image16.png",
+    "src": "/docs/aware-guide/image16.png",
+    "width": 691,
+    "height": 367,
+    "bytes": 16051
+  },
+  {
+    "file": "image17.png",
+    "src": "/docs/aware-guide/image17.png",
+    "width": 500,
+    "height": 203,
+    "bytes": 8787
+  },
+  {
+    "file": "image18.png",
+    "src": "/docs/aware-guide/image18.png",
+    "width": 730,
+    "height": 270,
+    "bytes": 14449
+  },
+  {
+    "file": "image19.png",
+    "src": "/docs/aware-guide/image19.png",
+    "width": 498,
+    "height": 207,
+    "bytes": 8945
+  },
+  {
+    "file": "image2.png",
+    "src": "/docs/aware-guide/image2.png",
+    "width": 186,
+    "height": 54,
+    "bytes": 9271
+  },
+  {
+    "file": "image20.png",
+    "src": "/docs/aware-guide/image20.png",
+    "width": 730,
+    "height": 270,
+    "bytes": 14141
+  },
+  {
+    "file": "image21.png",
+    "src": "/docs/aware-guide/image21.png",
+    "width": 501,
+    "height": 203,
+    "bytes": 8045
+  },
+  {
+    "file": "image22.png",
+    "src": "/docs/aware-guide/image22.png",
+    "width": 730,
+    "height": 270,
+    "bytes": 14136
+  },
+  {
+    "file": "image23.png",
+    "src": "/docs/aware-guide/image23.png",
+    "width": 524,
+    "height": 450,
+    "bytes": 15445
+  },
+  {
+    "file": "image24.png",
+    "src": "/docs/aware-guide/image24.png",
+    "width": 397,
+    "height": 122,
+    "bytes": 6981
+  },
+  {
+    "file": "image25.png",
+    "src": "/docs/aware-guide/image25.png",
+    "width": 147,
+    "height": 36,
+    "bytes": 1467
+  },
+  {
+    "file": "image26.png",
+    "src": "/docs/aware-guide/image26.png",
+    "width": 502,
+    "height": 319,
+    "bytes": 14007
+  },
+  {
+    "file": "image27.png",
+    "src": "/docs/aware-guide/image27.png",
+    "width": 19,
+    "height": 22,
+    "bytes": 593
+  },
+  {
+    "file": "image28.png",
+    "src": "/docs/aware-guide/image28.png",
+    "width": 399,
+    "height": 54,
+    "bytes": 5489
+  },
+  {
+    "file": "image29.png",
+    "src": "/docs/aware-guide/image29.png",
+    "width": 1305,
+    "height": 678,
+    "bytes": 238295
+  },
+  {
+    "file": "image3.png",
+    "src": "/docs/aware-guide/image3.png",
+    "width": 186,
+    "height": 54,
+    "bytes": 9271
+  },
+  {
+    "file": "image30.png",
+    "src": "/docs/aware-guide/image30.png",
+    "width": 1317,
+    "height": 727,
+    "bytes": 250097
+  },
+  {
+    "file": "image31.png",
+    "src": "/docs/aware-guide/image31.png",
+    "width": 384,
+    "height": 61,
+    "bytes": 3876
+  },
+  {
+    "file": "image32.png",
+    "src": "/docs/aware-guide/image32.png",
+    "width": 1339,
+    "height": 661,
+    "bytes": 364534
+  },
+  {
+    "file": "image33.png",
+    "src": "/docs/aware-guide/image33.png",
+    "width": 211,
+    "height": 299,
+    "bytes": 8537
+  },
+  {
+    "file": "image34.png",
+    "src": "/docs/aware-guide/image34.png",
+    "width": 1706,
+    "height": 1093,
+    "bytes": 670018
+  },
+  {
+    "file": "image35.png",
+    "src": "/docs/aware-guide/image35.png",
+    "width": 1002,
+    "height": 345,
+    "bytes": 24511
+  },
+  {
+    "file": "image36.png",
+    "src": "/docs/aware-guide/image36.png",
+    "width": 28,
+    "height": 29,
+    "bytes": 540
+  },
+  {
+    "file": "image37.png",
+    "src": "/docs/aware-guide/image37.png",
+    "width": 30,
+    "height": 27,
+    "bytes": 522
+  },
+  {
+    "file": "image38.png",
+    "src": "/docs/aware-guide/image38.png",
+    "width": 1334,
+    "height": 376,
+    "bytes": 40738
+  },
+  {
+    "file": "image39.png",
+    "src": "/docs/aware-guide/image39.png",
+    "width": 976,
+    "height": 307,
+    "bytes": 26955
+  },
+  {
+    "file": "image4.png",
+    "src": "/docs/aware-guide/image4.png",
+    "width": 549,
+    "height": 296,
+    "bytes": 15631
+  },
+  {
+    "file": "image40.png",
+    "src": "/docs/aware-guide/image40.png",
+    "width": 976,
+    "height": 307,
+    "bytes": 28243
+  },
+  {
+    "file": "image41.png",
+    "src": "/docs/aware-guide/image41.png",
+    "width": 1078,
+    "height": 1011,
+    "bytes": 454390
+  },
+  {
+    "file": "image42.png",
+    "src": "/docs/aware-guide/image42.png",
+    "width": 761,
+    "height": 490,
+    "bytes": 32988
+  },
+  {
+    "file": "image43.png",
+    "src": "/docs/aware-guide/image43.png",
+    "width": 501,
+    "height": 204,
+    "bytes": 9982
+  },
+  {
+    "file": "image44.png",
+    "src": "/docs/aware-guide/image44.png",
+    "width": 932,
+    "height": 707,
+    "bytes": 59095
+  },
+  {
+    "file": "image45.png",
+    "src": "/docs/aware-guide/image45.png",
+    "width": 503,
+    "height": 605,
+    "bytes": 26165
+  },
+  {
+    "file": "image46.png",
+    "src": "/docs/aware-guide/image46.png",
+    "width": 501,
+    "height": 315,
+    "bytes": 18683
+  },
+  {
+    "file": "image47.png",
+    "src": "/docs/aware-guide/image47.png",
+    "width": 259,
+    "height": 339,
+    "bytes": 13909
+  },
+  {
+    "file": "image48.png",
+    "src": "/docs/aware-guide/image48.png",
+    "width": 499,
+    "height": 240,
+    "bytes": 15567
+  },
+  {
+    "file": "image49.png",
+    "src": "/docs/aware-guide/image49.png",
+    "width": 501,
+    "height": 607,
+    "bytes": 26605
+  },
+  {
+    "file": "image5.png",
+    "src": "/docs/aware-guide/image5.png",
+    "width": 1549,
+    "height": 1216,
+    "bytes": 110810
+  },
+  {
+    "file": "image50.png",
+    "src": "/docs/aware-guide/image50.png",
+    "width": 499,
+    "height": 609,
+    "bytes": 28549
+  },
+  {
+    "file": "image51.png",
+    "src": "/docs/aware-guide/image51.png",
+    "width": 481,
+    "height": 466,
+    "bytes": 27178
+  },
+  {
+    "file": "image52.png",
+    "src": "/docs/aware-guide/image52.png",
+    "width": 1253,
+    "height": 949,
+    "bytes": 392325
+  },
+  {
+    "file": "image53.png",
+    "src": "/docs/aware-guide/image53.png",
+    "width": 401,
+    "height": 539,
+    "bytes": 102688
+  },
+  {
+    "file": "image54.png",
+    "src": "/docs/aware-guide/image54.png",
+    "width": 285,
+    "height": 631,
+    "bytes": 35464
+  },
+  {
+    "file": "image55.png",
+    "src": "/docs/aware-guide/image55.png",
+    "width": 656,
+    "height": 101,
+    "bytes": 12402
+  },
+  {
+    "file": "image56.png",
+    "src": "/docs/aware-guide/image56.png",
+    "width": 358,
+    "height": 250,
+    "bytes": 16551
+  },
+  {
+    "file": "image57.png",
+    "src": "/docs/aware-guide/image57.png",
+    "width": 585,
+    "height": 366,
+    "bytes": 24758
+  },
+  {
+    "file": "image58.png",
+    "src": "/docs/aware-guide/image58.png",
+    "width": 1657,
+    "height": 841,
+    "bytes": 589156
+  },
+  {
+    "file": "image59.png",
+    "src": "/docs/aware-guide/image59.png",
+    "width": 656,
+    "height": 101,
+    "bytes": 12688
+  },
+  {
+    "file": "image6.png",
+    "src": "/docs/aware-guide/image6.png",
+    "width": 799,
+    "height": 151,
+    "bytes": 14452
+  },
+  {
+    "file": "image60.png",
+    "src": "/docs/aware-guide/image60.png",
+    "width": 1723,
+    "height": 1037,
+    "bytes": 428600
+  },
+  {
+    "file": "image61.png",
+    "src": "/docs/aware-guide/image61.png",
+    "width": 398,
+    "height": 165,
+    "bytes": 13847
+  },
+  {
+    "file": "image62.png",
+    "src": "/docs/aware-guide/image62.png",
+    "width": 1702,
+    "height": 686,
+    "bytes": 345754
+  },
+  {
+    "file": "image63.png",
+    "src": "/docs/aware-guide/image63.png",
+    "width": 603,
+    "height": 761,
+    "bytes": 40565
+  },
+  {
+    "file": "image64.png",
+    "src": "/docs/aware-guide/image64.png",
+    "width": 603,
+    "height": 761,
+    "bytes": 48251
+  },
+  {
+    "file": "image65.png",
+    "src": "/docs/aware-guide/image65.png",
+    "width": 272,
+    "height": 104,
+    "bytes": 4639
+  },
+  {
+    "file": "image66.png",
+    "src": "/docs/aware-guide/image66.png",
+    "width": 23,
+    "height": 25,
+    "bytes": 328
+  },
+  {
+    "file": "image67.png",
+    "src": "/docs/aware-guide/image67.png",
+    "width": 1635,
+    "height": 287,
+    "bytes": 143410
+  },
+  {
+    "file": "image68.png",
+    "src": "/docs/aware-guide/image68.png",
+    "width": 235,
+    "height": 116,
+    "bytes": 32219
+  },
+  {
+    "file": "image69.png",
+    "src": "/docs/aware-guide/image69.png",
+    "width": 359,
+    "height": 420,
+    "bytes": 13940
+  },
+  {
+    "file": "image7.png",
+    "src": "/docs/aware-guide/image7.png",
+    "width": 450,
+    "height": 229,
+    "bytes": 9344
+  },
+  {
+    "file": "image8.png",
+    "src": "/docs/aware-guide/image8.png",
+    "width": 18,
+    "height": 18,
+    "bytes": 243
+  },
+  {
+    "file": "image9.png",
+    "src": "/docs/aware-guide/image9.png",
+    "width": 651,
+    "height": 242,
+    "bytes": 12283
+  }
+]

@@ -11,7 +11,15 @@ export function DocsShell() {
     if (!normalizedQuery) return []
 
     return docs.filter((doc) =>
-      [doc.title, doc.summary, doc.group, doc.label, ...doc.media]
+      [
+        doc.title,
+        doc.summary,
+        doc.group,
+        doc.label,
+        ...doc.media.map((item) =>
+          typeof item === 'string' ? item : `${item.title} ${item.note ?? ''}`,
+        ),
+      ]
         .join(' ')
         .toLowerCase()
         .includes(normalizedQuery),
@@ -80,7 +88,7 @@ export function DocsShell() {
       <div className="docs-main">
         <header className="topbar">
           <span>{location.pathname === '/' ? 'Overview' : 'Article'}</span>
-          <Link to="/media-guidelines">Media guidelines</Link>
+          <Link to="/authoring/media-guidelines">Media guidelines</Link>
         </header>
         <Outlet />
       </div>
