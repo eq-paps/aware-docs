@@ -40,6 +40,16 @@ export const internalNav: DocNavItem[] = [
     access: 'internal',
   },
   {
+    path: '/deployment/managed-install',
+    group: 'Deployment',
+    label: 'Managed install & deployment',
+    title: 'AWARE Managed Install & Deployment Guide',
+    summary:
+      'Build, release, deploy, and validate AWARE on managed instances using versioned release images.',
+    status: 'Ready for review',
+    access: 'internal',
+  },
+  {
     path: '/nexus/database-backup',
     group: 'Equature Nexus',
     label: 'Database backup',
