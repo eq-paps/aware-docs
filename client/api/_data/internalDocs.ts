@@ -1,4 +1,4 @@
-import type { DocSection } from '../../src/data/docTypes'
+import type { DocSection } from '../../src/data/docTypes.js'
 
 /**
  * SERVER-ONLY. These procedure bodies are gated behind Google auth and must

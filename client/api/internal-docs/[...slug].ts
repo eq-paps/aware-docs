@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { internalDocBySlug } from '../_data/internalDocs'
-import { readCookie, SESSION_COOKIE, verifySessionToken } from '../_lib/session'
+import { internalDocBySlug } from '../_data/internalDocs.js'
+import { readCookie, SESSION_COOKIE, verifySessionToken } from '../_lib/session.js'
 
 /**
  * GET /api/internal-docs/<group>/<slug> — serves a gated procedure body.

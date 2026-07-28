@@ -1,5 +1,5 @@
 import { next } from '@vercel/edge'
-import { readCookie, SESSION_COOKIE, verifySessionToken } from './api/_lib/session'
+import { readCookie, SESSION_COOKIE, verifySessionToken } from './api/_lib/session.js'
 
 /**
  * Edge-enforced gate for the internal docs API. This runs before the function

@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { clearedSessionCookie } from '../_lib/session'
-import { safeReturnTo } from '../_lib/http'
+import { clearedSessionCookie } from '../_lib/session.js'
+import { safeReturnTo } from '../_lib/http.js'
 
 /** GET /api/auth/logout — clears the session cookie and returns home. */
 export default function handler(req: VercelRequest, res: VercelResponse) {
