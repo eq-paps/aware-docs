@@ -23,7 +23,9 @@ export function ProtectedDocPage({ item }: { item: DocNavItem }) {
     let active = true
     setFetchState({ status: 'loading' })
     const slug = item.path.replace(/^\//, '')
-    fetch(`/api/internal-docs/${slug}`, { credentials: 'same-origin' })
+    fetch(`/api/internal-docs?slug=${encodeURIComponent(slug)}`, {
+      credentials: 'same-origin',
+    })
       .then(async (res) => {
         if (!active) return
         if (res.status === 401) return setFetchState({ status: 'unauthorized' })
