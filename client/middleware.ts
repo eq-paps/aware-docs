@@ -7,7 +7,7 @@ import { readCookie, SESSION_COOKIE, verifySessionToken } from './api/_lib/sessi
  * gated content. Public docs and the auth endpoints are untouched.
  */
 export const config = {
-  matcher: '/api/internal-docs/:path*',
+  matcher: '/api/internal-docs',
 }
 
 export default async function middleware(request: Request) {
