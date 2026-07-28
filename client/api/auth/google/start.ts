@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { buildAuthUrl } from '../../_lib/google'
-import { requestOrigin, safeReturnTo } from '../../_lib/http'
+import { buildAuthUrl } from '../../_lib/google.js'
+import { requestOrigin, safeReturnTo } from '../../_lib/http.js'
 
 const STATE_COOKIE = 'aware_oauth_state'
 const RETURN_COOKIE = 'aware_oauth_return'

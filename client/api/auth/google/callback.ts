@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { exchangeCode, isAllowedIdentity } from '../../_lib/google'
-import { requestOrigin, safeReturnTo } from '../../_lib/http'
-import { createSessionToken, readCookie, sessionCookie } from '../../_lib/session'
+import { exchangeCode, isAllowedIdentity } from '../../_lib/google.js'
+import { requestOrigin, safeReturnTo } from '../../_lib/http.js'
+import { createSessionToken, readCookie, sessionCookie } from '../../_lib/session.js'
 
 const STATE_COOKIE = 'aware_oauth_state'
 const RETURN_COOKIE = 'aware_oauth_return'

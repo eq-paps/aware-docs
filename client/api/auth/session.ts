@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { readCookie, SESSION_COOKIE, verifySessionToken } from '../_lib/session'
+import { readCookie, SESSION_COOKIE, verifySessionToken } from '../_lib/session.js'
 
 /**
  * GET /api/auth/session — lets the client learn whether the visitor is signed
