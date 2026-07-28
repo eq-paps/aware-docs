@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "jose": "^5.9.6",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router": "^8.0.1"
   },
   "devDependencies": {
     "@types/node": "^24.13.2",
+    "@vercel/edge": "^1.2.2",
+    "@vercel/node": "^5.1.16",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",

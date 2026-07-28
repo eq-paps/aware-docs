@@ -1,15 +1,21 @@
 import { useMemo, useState } from 'react'
-import { Link, NavLink, Outlet, useLocation } from 'react-router'
-import { docs, navGroups } from '../data/docs'
+import { Link, NavLink, Outlet, useLocation, useSearchParams } from 'react-router'
+import { useAuth } from '../auth/authContext'
+import { docs } from '../data/docs'
+import { orderedNavGroups } from '../data/nav'
 
 export function DocsShell() {
   const [query, setQuery] = useState('')
   const location = useLocation()
+  const [searchParams] = useSearchParams()
+  const auth = useAuth()
+  const authNotice = searchParams.get('auth')
 
   const searchResults = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase()
     if (!normalizedQuery) return []
 
+    // Search covers public docs only — internal bodies aren't in the bundle.
     return docs.filter((doc) =>
       [
         doc.title,
@@ -65,12 +71,21 @@ export function DocsShell() {
             <NavLink end to="/">
               Overview
             </NavLink>
-            {Object.entries(navGroups).map(([group, groupDocs]) => (
+            {orderedNavGroups.map(([group, groupDocs]) => (
               <div className="nav-group" key={group}>
                 <span className="nav-label">{group}</span>
                 {groupDocs.map((doc) => (
                   <NavLink key={doc.path} to={doc.path}>
-                    {doc.label}
+                    <span>{doc.label}</span>
+                    {doc.access === 'internal' ? (
+                      <span
+                        className="nav-lock"
+                        aria-label="Internal — sign-in required"
+                        title="Internal — sign-in required"
+                      >
+                        🔒
+                      </span>
+                    ) : null}
                   </NavLink>
                 ))}
               </div>
@@ -88,8 +103,38 @@ export function DocsShell() {
       <div className="docs-main">
         <header className="topbar">
           <span>{location.pathname === '/' ? 'Overview' : 'Article'}</span>
-          <Link to="/authoring/media-guidelines">Media guidelines</Link>
+          <div className="topbar-actions">
+            <Link to="/authoring/media-guidelines">Media guidelines</Link>
+            {auth.status === 'authenticated' ? (
+              <span className="auth-status">
+                <span className="auth-email">{auth.user.email}</span>
+                <button className="auth-link" onClick={auth.signOut} type="button">
+                  Sign out
+                </button>
+              </span>
+            ) : auth.status === 'anonymous' ? (
+              <button
+                className="auth-link"
+                onClick={() => auth.signIn()}
+                type="button"
+              >
+                Staff sign in
+              </button>
+            ) : null}
+          </div>
         </header>
+
+        {authNotice === 'denied' ? (
+          <div className="auth-banner" role="alert">
+            That account isn’t an @equature.com Google account, so it can’t access
+            internal docs.
+          </div>
+        ) : authNotice === 'error' || authNotice === 'invalid_request' ? (
+          <div className="auth-banner" role="alert">
+            Sign-in didn’t complete. Please try again.
+          </div>
+        ) : null}
+
         <Outlet />
       </div>
     </div>
