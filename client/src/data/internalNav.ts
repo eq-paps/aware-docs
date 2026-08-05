@@ -50,6 +50,16 @@ export const internalNav: DocNavItem[] = [
     access: 'internal',
   },
   {
+    path: '/mobile/notification-settings',
+    group: 'Mobile',
+    label: 'Device notification settings',
+    title: 'Aware — Required Device Settings',
+    summary:
+      'iOS and Android settings that keep Aware alerts arriving immediately and stop the phone from sleeping or offloading the app between emergencies.',
+    status: 'Ready for review',
+    access: 'internal',
+  },
+  {
     path: '/nexus/database-backup',
     group: 'Equature Nexus',
     label: 'Database backup',

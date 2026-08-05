@@ -288,6 +288,207 @@ export const internalDocs: DocSection[] = [
     ],
     media: [],
   },
+  {
+    path: '/mobile/notification-settings',
+    group: 'Mobile',
+    label: 'Device notification settings',
+    title: 'Aware — Required Device Settings',
+    summary:
+      'iOS and Android settings that keep Aware alerts arriving immediately and stop the phone from sleeping or offloading the app between emergencies.',
+    status: 'Ready for review',
+    updated: 'Notification settings guide v1',
+    access: 'internal',
+    body: [
+      {
+        heading: 'Why these settings are required',
+        text: 'Aware alerts you when there is a real emergency, and those may be weeks apart. Both iOS and Android save battery by quieting and eventually shutting down apps they have not seen activity from recently, and a long stretch between emergencies can look that way to the operating system. The settings below keep alerts arriving immediately and prevent the phone from putting Aware to sleep.',
+        bullets: [
+          'Menu names vary by OS version and manufacturer, especially on Samsung, Xiaomi, OnePlus, and Motorola devices. If a menu is not where this guide says, search the Settings app for the setting name.',
+          'Written against iOS 18–26 and Android 13–16.',
+        ],
+      },
+      {
+        heading: 'Quick checklist — iOS',
+        text: 'Confirm each of the following on the device.',
+        bullets: [
+          'Notifications → Aware → Allow Notifications on',
+          'Notifications → Aware → Time Sensitive Notifications on',
+          'Notifications → Aware → Lock Screen, Notification Centre, and Banners all ticked',
+          'Notifications → Scheduled Summary → Aware not included',
+          'Focus → each Focus → Time Sensitive Notifications allowed',
+          'App Store → Offload Unused Apps off',
+          'General → Background App Refresh on for Aware',
+          'Cellular → Aware on',
+        ],
+      },
+      {
+        heading: 'Quick checklist — Android',
+        text: 'Confirm each of the following on the device.',
+        bullets: [
+          'Apps → Aware → Notifications → All Aware notifications on',
+          'Apps → Aware → Notifications → Emergency Alerts on',
+          'Emergency Alerts → Override Do Not Disturb on',
+          'Apps → Aware → App battery usage → Unrestricted',
+          'Apps → Aware → Manage app if unused off',
+          'Apps → Aware → Mobile data & Wi-Fi → Background data on',
+          'Apps → Aware → Mobile data & Wi-Fi → Unrestricted mobile data usage on',
+          'Manufacturer-specific battery settings (see below)',
+        ],
+      },
+      {
+        heading: 'iOS — Allow notifications',
+        text: 'Settings → Notifications → Aware. Time Sensitive Notifications is the most important setting on this page: it is what allows an Aware alert to appear immediately and make a sound even while a Focus mode or Do Not Disturb is active. With it off, alerts are held silently until the phone is unlocked or the Focus ends. If the Time Sensitive row is missing, the installed version of Aware is too old — update the app.',
+        table: {
+          headers: ['Setting', 'Value'],
+          rows: [
+            ['Allow Notifications', 'On'],
+            ['Lock Screen / Notification Centre / Banners', 'All ticked'],
+            ['Banner Style', 'Persistent (stays until dismissed)'],
+            ['Sounds', 'On'],
+            ['Badges', 'On'],
+            ['Time Sensitive Notifications', 'On'],
+          ],
+        },
+      },
+      {
+        heading: 'iOS — Do Not Disturb and other Focus modes',
+        text: 'Settings → Focus → [each Focus: Do Not Disturb, Sleep, Work, Driving, Personal] → Options. Set Time Sensitive Notifications (sometimes shown as "Allow apps to notify immediately") to Allowed / On.',
+        bullets: [
+          'Check every Focus mode in use — the setting is per-Focus, not global. A Focus with this turned off will silence Aware alerts even though everything else is configured correctly.',
+          'Optionally also add Aware under that Focus’s Apps → Allowed Notifications list, which lets all Aware notifications through regardless of type.',
+        ],
+      },
+      {
+        heading: 'iOS — Scheduled Summary',
+        text: 'Settings → Notifications → Scheduled Summary. If Scheduled Summary is on, make sure Aware is not in the list of included apps. Apps in the summary have their notifications held and delivered in a batch at set times — which for an emergency alert could be hours late.',
+      },
+      {
+        heading: 'iOS — Deliver Quietly',
+        text: 'If Aware alerts stop showing banners, the notification may have been set to deliver quietly by accident. Swipe left on an Aware notification → Options → make sure Deliver Prominently is selected, not Deliver Quietly.',
+      },
+      {
+        heading: 'iOS — Keep the app from being removed or slept',
+        text: 'Offload Unused Apps is the iOS equivalent of Android’s "pause unused apps." When on, iOS may delete an infrequently used app’s data to reclaim space, leaving only the icon, and an offloaded Aware cannot receive alerts. Long gaps between emergencies can make iOS treat Aware as a candidate for offloading, so this setting should always be off. Low Power Mode does not block push notifications, but it does suspend background activity, which can delay the app confirming and fetching alert details.',
+        table: {
+          headers: ['Setting', 'Where', 'Value'],
+          rows: [
+            ['Offload Unused Apps', 'Settings → App Store', 'Off'],
+            [
+              'Background App Refresh',
+              'Settings → General → Background App Refresh',
+              'On, and On for Aware',
+            ],
+            ['Low Power Mode', 'Settings → Battery', 'Off where practical'],
+            ['Cellular data', 'Settings → Cellular → Aware', 'On'],
+          ],
+        },
+      },
+      {
+        heading: 'iOS — Confirm Aware was not already offloaded',
+        text: 'Check Settings → General → iPhone Storage → Aware. If it shows Offloaded, tap Reinstall App. Separately, if Screen Time → Downtime or App Limits is in use, add Aware to Screen Time → Always Allowed so it is never blocked.',
+      },
+      {
+        heading: 'Android — Allow notifications',
+        text: 'Settings → Apps → All apps → Aware → Notifications. Paths below are stock Android; see the manufacturer section for common variations.',
+        table: {
+          headers: ['Setting', 'Value'],
+          rows: [
+            ['All Aware notifications', 'On'],
+            ['Emergency Alerts category', 'On'],
+          ],
+        },
+      },
+      {
+        heading: 'Android — Emergency Alerts category',
+        text: 'Tap the Emergency Alerts category itself (you may need to expand Notification categories). Override Do Not Disturb is the Android equivalent of iOS’s Time Sensitive setting — without it, Do Not Disturb silences Aware alerts, and it must be enabled by hand because the app cannot turn it on for you. If you see an older "aware" or "Miscellaneous" category, ignore it; alerts now use Emergency Alerts.',
+        table: {
+          headers: ['Setting', 'Value'],
+          rows: [
+            ['Behaviour / Importance', 'Urgent, or Make sound and pop on screen'],
+            ['Override Do Not Disturb', 'On'],
+            ['Lock screen', 'Show all notification content'],
+            ['Vibration', 'On'],
+          ],
+        },
+      },
+      {
+        heading: 'Android — Do Not Disturb',
+        text: 'Settings → Notifications → Do Not Disturb → Apps (path varies by version). Add Aware to the list of apps allowed to interrupt. This is an alternative to the per-category Override switch above — either one works, and both is fine.',
+      },
+      {
+        heading: 'Android — Battery usage',
+        text: 'Settings → Apps → All apps → Aware → App battery usage → Unrestricted. This is the single most important Android setting and the most common cause of missed alerts. On Optimised (the default) or Restricted, Android may delay or drop alerts while the phone is idle — and the longer Aware goes unused, the more aggressively it is throttled.',
+      },
+      {
+        heading: 'Android — Stop Android from pausing an unused app',
+        text: 'Settings → Apps → All apps → Aware → Manage app if unused → Off. Depending on version this appears as Manage app if unused, Pause app activity if unused, or Remove permissions if app isn’t used. When enabled, Android revokes permissions and stops notifications for apps that have not been opened for a few months. Because emergencies are infrequent, there can be long stretches with no reason to open Aware, and Android counts that as unused — meaning the app can quietly lose notification permission during a quiet period, with no warning, and fail to alert when it matters. Always turn it off.',
+      },
+      {
+        heading: 'Android — Background data',
+        text: 'Settings → Apps → All apps → Aware → Mobile data & Wi-Fi. Both settings are required; background data alone is not enough if Data Saver is turned on. The same exemption can also be set from Settings → Network & internet → Data Saver → Unrestricted data access → Aware On.',
+        bullets: [
+          'Background data → On — lets Aware use data while it is not open, which is how alert details and delivery confirmations are fetched.',
+          'Unrestricted mobile data usage → On — exempts Aware from Data Saver, so alerts still arrive while Data Saver is active.',
+        ],
+      },
+      {
+        heading: 'Android — Manufacturer-specific settings',
+        text: 'Several manufacturers add their own battery management on top of Android, and these are a frequent cause of missed notifications.',
+        table: {
+          headers: ['Manufacturer', 'Settings to check'],
+          rows: [
+            [
+              'Samsung',
+              'Battery → Background usage limits: Aware must not be in Sleeping apps or Deep sleeping apps. Battery → Adaptive battery: consider off. Apps → Aware → Battery: Unrestricted.',
+            ],
+            [
+              'Xiaomi / Redmi / POCO (MIUI, HyperOS)',
+              'Apps → Manage apps → Aware → Autostart: On. Same screen → Battery saver: No restrictions. Recents screen: long-press Aware and lock it so it is not cleared.',
+            ],
+            [
+              'OnePlus / OPPO / realme (ColorOS)',
+              'Battery → Battery optimisation → Aware: Don’t optimise. Apps → Aware: Allow background activity.',
+            ],
+            [
+              'Huawei',
+              'Battery → App launch → Aware: Manage manually, with Auto-launch, Secondary launch, and Run in background all on.',
+            ],
+            ['Motorola / Nokia / stock-like', 'Usually just the standard Android settings above.'],
+          ],
+        },
+      },
+      {
+        heading: 'Verifying it works',
+        text: 'After changing these settings, ask the administrator to send a test alert. The configuration is working correctly when all of the following are true.',
+        bullets: [
+          'The alert appears immediately as a banner over whatever is on screen.',
+          'It makes a sound.',
+          'On iOS the banner is labelled Time Sensitive.',
+          'With Do Not Disturb on, it still comes through (once the settings above are applied).',
+        ],
+      },
+      {
+        heading: 'If an alert arrives late or silently',
+        text: 'Re-check the settings in this order.',
+        bullets: [
+          'iOS: Time Sensitive on, and allowed in the active Focus. Android: Override Do Not Disturb on.',
+          'Android: App battery usage set to Unrestricted.',
+          'Android: Pause app activity if unused off. iOS: Offload Unused Apps off.',
+          'Android: manufacturer battery settings.',
+        ],
+      },
+      {
+        heading: 'What is not required',
+        text: 'Rule these out early during troubleshooting — none of them affect alert delivery.',
+        bullets: [
+          'Keeping Aware open or running in the background is not required. Alerts are delivered by the operating system and will wake the app.',
+          'Aware does not need to be in recent apps. Clearing it from the recents list is fine.',
+          'Location permission is not required for alerts to arrive.',
+        ],
+      },
+    ],
+    media: [],
+  },
 ]
 
 export const internalDocBySlug = (slug: string): DocSection | undefined =>
